@@ -3,9 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no">
-	<title>Document</title>
+	<title>Future Home of Hyde Cabinetry</title>
 	 <link rel="stylesheet" href="style.css">
 	 <link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+	 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 	 <script type="text/javascript" src="js/jquery-2.1.1.min.js">
 	 </script>
 </head>
@@ -42,33 +44,41 @@
 				</div>
 			</section>
 		</div> <!-- END COVER -->
-	 <script language="JavaScript" type="text/javascript">
+	<script language="JavaScript" type="text/javascript">
 		 $(document).ready(function(){
+		 	console.log("hello");
 		 
-			 var imgArr = new Array( // relative paths of images
-			 'images/1.jpg',
-			 'images/2.jpg',
-			 'images/3.jpg'
-			 );
+		 
+		 	var windowsize = $(window).width();
+				console.log(windowsize);
 			 
-			 var preloadArr = new Array();
-			 var i;
-			 
-			 /* preload images */
-			 for(i=0; i < imgArr.length; i++){
-			 preloadArr[i] = new Image();
-			 preloadArr[i].src = imgArr[i];
-			 }
-			 
-			 var currImg = 1;
-			 var intID = setInterval(changeImg, 10000);
-			 
-			 /* image rotator */
-			 function changeImg(){
-			 $('#mast-head').animate({opacity: 0}, 1500, function(){
-			 $(this).css('background','url(' + preloadArr[currImg++%preloadArr.length].src +') ');
-			 }).animate({opacity: 1}, 1000);
-			 }
+					 var imgArr = new Array( // relative paths of images
+					 'images/1.jpg',
+					 'images/2.jpg',
+					 'images/3.jpg'
+					 );
+					 
+					 var preloadArr = new Array();
+					 var i;
+					 
+					 /* preload images */
+					 for(i=0; i < imgArr.length; i++){
+					 preloadArr[i] = new Image();
+					 preloadArr[i].src = imgArr[i];
+					 }
+					 
+					 var currImg = 1;
+					 var intID = setInterval(changeImg, 10000);
+				if (windowsize >= 800) {
+					console.log("hello");
+					 /* image rotator */
+					 function changeImg(){
+					 $('#mast-head').animate({opacity: 0}, 1500, function(){
+					 $(this).css('background','url(' + preloadArr[currImg++%preloadArr.length].src +') ');
+					 }).animate({opacity: 1}, 1000);
+					}
+				}
+			
 		 });
 	</script>
 </body>
