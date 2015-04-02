@@ -96,6 +96,10 @@ input.email {
 	border: 2px solid black;
 	margin-top: 1em;
 	letter-spacing: 0.14em;
+	font-weight: 400;
+	-webkit-transition: opacity 0.12s,background-color 0.12s,color 0.12s,border-color 0.12s;
+	-moz-transition: opacity 0.12s,background-color 0.12s,color 0.12s,border-color 0.12s;
+	transition: opacity 0.12s,background-color 0.12s,color 0.12s,border-color 0.12s;
 }
 
 .cta-button:hover {
