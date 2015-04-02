@@ -88,17 +88,19 @@ input.email {
 .cta-button {
 	font-family:'Vollkorn', serif;
 	text-transform: uppercase;
-	background: black;
-	color: white;
+	background: transparent;
+	color: black;
 	font-size: 1.5em;
 	height: 2.5em;
 	width: 100%;
 	border: 2px solid black;
 	margin-top: 1em;
+	letter-spacing: 0.14em;
 }
 
 .cta-button:hover {
-	background-color: grey;
+	background-color: black;
+	color: white;
 }
 
 
